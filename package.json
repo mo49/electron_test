@@ -7,12 +7,27 @@
     "start": "electron .",
     "pack": "electron-builder --dir",
     "dist-mac": "electron-builder",
-    "dist-windows": "electron-builder --windows"
+    "dist-windows": "electron-builder --windows",
+    "watch": "browserify ./src/js/main.js -t babelify -o ./main.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.18.12",
+    "browserify": "^14.4.0",
     "electron": "^1.6.11",
-    "electron-builder": "^19.13.0"
+    "electron-builder": "^19.13.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-watch": "^4.3.11",
+    "node-machine-id": "^1.1.9",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
   }
 }

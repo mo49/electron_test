@@ -4,11 +4,27 @@
     <meta charset="UTF-8">
     <title>Hello World!</title>
   </head>
+  <style>
+    .detail{
+      position: fixed;
+      top: 0; left: 0;
+      font-size: 20px;
+    }
+    #webview{
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+    }
+  </style>
 
   <body>
-    <h1>初めてのElectron</h1>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chrome <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+    <!-- https://electron.atom.io/docs/api/webview-tag/ -->
+    <webview id="webview" src="https://www.google.co.jp/" autosize="on"></webview>
+    <span class="detail">
+      We are using node <script>document.write(process.versions.node)</script>,
+      Chrome <script>document.write(process.versions.chrome)</script>,
+      and Electron <script>document.write(process.versions.electron)</script>.
+    </span>
   </body>
+  <script src="./js/app.js"></script>
 </html>
